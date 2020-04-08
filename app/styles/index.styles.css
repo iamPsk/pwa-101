@@ -1,1 +1,4 @@
 @import url('./imports/defaults.styles.css');
+@import url('./imports/header.styles.css');
+@import url('./imports/section.styles.css');
+@import url('./imports/footer.styles.css');
