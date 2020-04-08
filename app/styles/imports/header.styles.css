@@ -1,0 +1,112 @@
+body > :first-child{
+  padding: 0.75em;
+  color: #212121;
+}
+
+body > :first-child h1{
+  padding: .25em;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 0.75em;
+  text-shadow: 1px 1px 2px #212121;
+}
+
+body > :first-child h1 span{
+  position: absolute;
+  bottom: 0;
+  font-size: 0.5em;
+  color: #000000;
+  text-shadow: -12px 14px 4px #757575;
+}
+
+nav {
+  padding: 0 1em;
+  display: flex;
+  align-items: baseline;
+  transition: width 500ms ease-in-out;
+  margin: auto;
+  /* margin-bottom: 0.625em; */
+}
+
+nav > :last-child {
+  margin-left: auto;
+  position: relative;
+}
+
+nav > :last-child :first-child{
+  padding: 0 1em 0.5em;
+  width: 100%;
+  border: none;
+  border-bottom: thin solid #75757580;
+  outline: none;
+  background-color: inherit;
+  text-transform: capitalize;
+  letter-spacing: 0.375px;
+  font-size: 1em;
+}
+
+
+form > :last-child {
+  font-size: 1.125em;
+  position: absolute;
+  top: 1px;
+  right: 12px;
+  color: #75757590;
+}
+
+a {
+  margin-left: 0.5em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: 0.5px;
+  transition: color 750ms ease-out;
+}
+
+a:hover{
+  color: #00000050;
+}
+
+
+
+#collapse-button {
+  display: none;
+}
+
+@media (min-width:550px) {
+  nav{
+    width: 80%;
+    padding-left: 0;
+  }
+}
+
+@media (max-width:440px) {
+  nav {
+    flex-direction: row-reverse;  
+    justify-content: space-between;
+  }
+
+  #collapse {
+    display: none;
+  }
+
+  #collapse-button {
+    display: initial;
+    border: thin solid #fafafa;
+    background-color: #212121;
+    padding: .75em .5em;
+    color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #757575;
+  }
+
+  nav > :last-child {
+    margin-left: unset;
+    display: flex;
+  }
+}
+
