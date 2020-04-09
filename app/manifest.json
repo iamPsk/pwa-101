@@ -6,6 +6,7 @@
   "short_name": "Pwa",
   "scope": "/",
   "display": "standalone",
+  "orientation": "any",
   "icons": [
     {
       "src": "./assets/android-icon-36x36.png",
@@ -45,7 +46,7 @@
     }
   ],
   "start_url": "/app",
-  "theme_color": "#757575",
+  "theme_color": "#212121",
   "background_color": "#fafafa",
   "screenshorts": [
     {
