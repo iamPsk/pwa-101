@@ -1,16 +1,17 @@
 const cacheResources = [
   '/',
-  'index.html',
-  'index.js',
-  'styles',
-  'styles/index.styles.css',
-  'styles/imports',
-  'styles/imports/defaults.styles.css',
-  'styles/imports/footer.styles.css',
-  'styles/imports/header.styles.css',
-  'styles/imports/section.styles.css',
-  'assets',
-  'assets/2.jpg',
+  'app/index.html',
+  'app/index.js',
+  'app/styles',
+  'app/styles/index.styles.css',
+  'app/styles/imports',
+  'app/styles/imports/defaults.styles.css',
+  'app/styles/imports/footer.styles.css',
+  'app/styles/imports/header.styles.css',
+  'app/styles/imports/section.styles.css',
+  'app/assets',
+  'app/assets/2.jpg',
+  'node_modules/@fortawesome/fontawesome-free/css/all.css'
 ]
 
 self.addEventListener('statechange', function (event) {
