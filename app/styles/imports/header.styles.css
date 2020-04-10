@@ -10,7 +10,7 @@ body > :first-child h1{
   font-weight: 400;
   position: relative;
   margin-bottom: 0.75em;
-  text-shadow: 1px 1px 2px #212121;
+  text-shadow: 1px 1px 1px #757575;
 }
 
 body > :first-child h1 span{
@@ -27,7 +27,6 @@ nav {
   align-items: baseline;
   transition: width 500ms ease-in-out;
   margin: auto;
-  /* margin-bottom: 0.625em; */
 }
 
 nav > :last-child {
