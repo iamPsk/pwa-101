@@ -27,14 +27,10 @@ const cacheResources = [
 ];
 
 const appCache = 'pwa-101';
-
-self.addEventListener('statechange', function (event) {
-  console.log('change detected');
-  console.log(event.target.state);
-})
+const pagesCache = 'pwa-101-pagesV1'
 
 self.addEventListener('install', function (event) {
-  console.log('Service worker is installing');
+  self.skipWaiting();
   event.waitUntil(
     caches.open(appCache).then(function (cache) {
       return cache.addAll(cacheResources)
@@ -43,18 +39,27 @@ self.addEventListener('install', function (event) {
 })
 
 self.addEventListener('activate', (event) => {
-  console.log('Service worker is activating');
+  self.clients.claim();
+  event.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(keyList.map(function (key) {
+        if (appCache.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
 })
 
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then( response => {
-      return response || fetch(e.request).then( res => {
-        caches.open(appCache).then( cache => {
+    caches.match(e.request).then(response => {
+      return response || fetch(e.request).then(res => {
+        caches.open(appCache).then(cache => {
           cache.put(e.request, res)
         })
         return res.clone()
       })
-    }).catch( err => console.error(err)) 
+    }).catch(err => console.error(err))
   );
 })
