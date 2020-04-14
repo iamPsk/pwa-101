@@ -1,17 +1,16 @@
 section {
-  background-color: #fafafa;
+  background-color: #d3d4d6
 }
 
 section > :first-child h1 {
-  padding: .75em 0 .25em;
+  padding: 1em;
   display: inline-block;
   text-transform: capitalize;
   font-weight: 350;
-  font-size: 1.75em;
+  font-size: 1.5em;
   font-weight: 500;
   letter-spacing: 0.5px;
-  margin-left: 1em;
-  color: #424242;
+  color: #2c3632;
 }
 
 #layout {
@@ -21,10 +20,12 @@ section > :first-child h1 {
 }
 
 #card {
-  padding: 0.25em 1em 2em;
+
+  color: #030303;
+
+  padding: 0.25em 1em 3em;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
 }
 
 img {
@@ -34,19 +35,17 @@ img {
   max-width: 200px;
   height: 200px;
   margin-bottom: 1em;
-  border: 1px solid rgb(255, 255, 255);
-  box-shadow: 0 2px 5px #808080;
+  border: thin solid #030303;
+  box-shadow: 0 1px 3px #030303;
 }
 
 #card header h1 {
-  color: #000;
-  margin-bottom: 0.75em;
-  font-size: 1.625em;
+  margin-bottom: 1em;
+  font-size: 1.325em;
   text-transform: uppercase;
   text-align: center;
-  padding: 0.5em 0;
-  letter-spacing: 0.5px;
-  text-shadow: .5px .5px 1px #000;
+  padding: 0;
+  letter-spacing: 1.5px;
 }
 
 #card > :last-child {
@@ -67,16 +66,17 @@ img {
 }
 
 #card > :last-child p{
-  font-weight: 400px;
+  font-weight: 475;
   letter-spacing: .5px;
-  color: #000;
+  color: inherit;
+  font-size: 1.1625em;
 }
 
 #card > :last-child i {
-  background: #000;
-  color: #fff;
-  border: thin solid rgb(255, 255, 255);
-  box-shadow: 0 1px 3px #404040;
+  background: #2c3632;
+  color: #d3d4d6;
+  border: thin solid #2c3632;
+  box-shadow: 0 1px 3px #030303;
   margin-right: 2em;
   width: 40px;
   height: 40px;
@@ -85,8 +85,8 @@ img {
   justify-content: center;
   align-items: center;
   padding: 1em;
-  font-weight: 475;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: .5px;
   font-style: normal;
 }
 
@@ -94,23 +94,19 @@ img {
 #layout > :last-child {
   align-self: center;
   font-size: 3em;
-  color: #000;
+  color: #2c3632;
   transition: font-size 250ms ease-in;
   margin: 0;
   padding: 0;
 }
 
-#layout > :first-child:hover,
-#layout > :last-child:hover {
-  font-size: 4em;
-}
 
 #layout > :first-child {
-  text-shadow: 1px 3px 2px #808080 ;
+  text-shadow: 1px 3px 2px #030303 ;
 }
 
 #layout > :last-child {
-  text-shadow: 3px 1px 2px #808080 ;
+  text-shadow: 3px 1px 2px #030303 ;
 }
 
 @media (max-width: 550px) {
@@ -125,10 +121,12 @@ img {
     flex-direction: column;
   }
 
+
+
   #card > :last-child > * {
     margin-bottom: 0.5em;
     margin-left: 0;
-    border-bottom: 1px solid #000;
+    border-bottom: thin solid #899593;
   }
 
   #card > :last-child i {
@@ -137,10 +135,6 @@ img {
 
   #details :nth-child(2) {
     flex-direction: row;
-  }
-
-  #card header h1 {
-    margin-bottom: 0.5em;
   }
 }
 
