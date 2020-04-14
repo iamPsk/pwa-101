@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="./styles/index.styles.css">
-  <link rel="manifest" href="manifest.json">  
+  <!-- <link rel="manifest" href="manifest.json">  
   <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
@@ -18,29 +19,30 @@
   <link rel="icon" type="image/png" sizes="192x192"  href="assets/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png"> -->
   <title>PWA-101</title>
 </head>
+
 <body>
   <header>
     <h1>
-      Progressive Web App
+      Progressive Web Apps
       <span>101</span>
     </h1>
-
     <nav>
-      <a class="fas fa-bars" id="collapse-button" href=""></a>
-
+      <a id="collapse-button" href="">
+        <div></div>
+        <div></div>
+        <div></div>
+      </a>
       <div id="collapse">
-        <a class="nav-brand" href="">
-          Home
-        </a>
-        <a href="">About</a>
-        <a href="">Contact</a>
+        <a class="active" href="">Home</a>
+        <a href="">About me</a>
+        <a href="#footer">Contact</a>
         <a href="">Source Code</a>
       </div>
       <form action="">
-        <input type="text" placeholder="Search">
+        <input autofocus type="text" placeholder="Search">
         <i class="fas fa-search"></i>
       </form>
     </nav>
@@ -54,7 +56,7 @@
     </header>
     <div id="layout">
       <i class="fas fa-chevron-left nav-arr"></i>
-      
+
       <div id="card">
         <img src="./assets/2.jpg" alt="">
         <header>
@@ -77,7 +79,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="footer">
     <div id="contact-info">
       <p>get in touch with me</p>
       <div>
@@ -87,9 +89,11 @@
       </div>
     </div>
     <p>
-      &copy; 2020, All Rights Reserved | Created and designed by<a target="_blank" href="https://iampsk.github.io">S P Khonjelwayo</a>
+      &copy; 2020, All Rights Reserved | Created and designed by<a target="_blank" href="https://iampsk.github.io">S P
+        Khonjelwayo</a>
     </p>
   </footer>
-  <script src="index.js"></script>  
+  <script src="./scripts/ui.js"></script>  
 </body>
+
 </html>

@@ -1,7 +1,5 @@
 section {
   background-color: #fafafa;
-  padding: 0.25em 1em 0.75em;
-  /* margin-bottom: 0.75em; */
 }
 
 section > :first-child h1 {
@@ -12,11 +10,8 @@ section > :first-child h1 {
   font-size: 1.375em;
   font-weight: 475;
   letter-spacing: 0.5px;
-  /* border-bottom: 0.5px solid #424242; */
   margin-left: 1em;
   color: #424242;
-  /* margin-bottom: 0; */
-  /* border: 1px solid #000; */
 }
 
 #layout {
@@ -72,7 +67,6 @@ img {
 
 #card > :last-child p{
   font-weight: 400px;
-  /* font-size: 1.125em; */
   letter-spacing: .5px;
   color: #000;
 }
@@ -107,8 +101,6 @@ img {
 
 #layout > :first-child:hover,
 #layout > :last-child:hover {
-  /* cursor: pointer; */
-  /* color: aqua; */
   font-size: 4em;
 }
 
