@@ -3,12 +3,12 @@ section {
 }
 
 section > :first-child h1 {
-  padding: 1em 0.5em 0;
+  padding: .75em 0 .25em;
   display: inline-block;
   text-transform: capitalize;
   font-weight: 350;
-  font-size: 1.375em;
-  font-weight: 475;
+  font-size: 1.75em;
+  font-weight: 500;
   letter-spacing: 0.5px;
   margin-left: 1em;
   color: #424242;
@@ -24,6 +24,7 @@ section > :first-child h1 {
   padding: 0.25em 1em 2em;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1em;
 }
 
 img {
@@ -39,7 +40,7 @@ img {
 
 #card header h1 {
   color: #000;
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
   font-size: 1.625em;
   text-transform: uppercase;
   text-align: center;

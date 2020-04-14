@@ -1,39 +1,37 @@
 body > :first-child{
-  /* padding: 0.75em; */
   padding-bottom: 0;
-  color: #212121;
+  color: #030303;
 }
 
 body > :first-child h1{
-  padding: .25em;
-  font-size: 3.5em;
+  padding: 0.25em;
+  padding-top: .25em;
+  font-size: 3.25em;
   text-align: center;
   font-weight: 400;
   position: relative;
   margin-bottom: 0.75em;
-  text-shadow: 1px 1px 1px #757575;
+  text-shadow: 1px 1px 1px #899593;
 }
 
 body > :first-child h1 span{
   position: absolute;
   bottom: 0;
   font-size: 0.5em;
-  color: #000000;
-  text-shadow: -12px 14px 4px #757575;
+  text-shadow: -12px 14px 4px #030303;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: auto;
-  margin-bottom: 1em;
+  margin: 0 auto 1em;
 }
 
 #collapse{
   display: flex;
   align-self: flex-end;
-  color: #777777;
+  color: #2c3632;
 
 }
 
@@ -50,14 +48,14 @@ nav {
 }
 
 #collapse a:hover{
-  color: #000000;
+  color: #030303;
 }
 
 form {
   border: none;
-  border-bottom: thin solid #000;
+  border-bottom: thin solid #2c3632;
   position: relative;
-  
+  background-color: inherit;
 }
 
 form:hover  i{
@@ -65,6 +63,7 @@ form:hover  i{
 }
 
 input {
+  background-color: inherit;
   padding: 0 .5em .4em;
   width: 100%;
   border: none;
@@ -75,10 +74,10 @@ input {
 }
 
 ::placeholder{
-  color: gray;
+  color: #2c3632;
 }
 form > i {
-  color: gray;
+  color: #2c3632;
   font-size: 1em;
   position: absolute;
   top: 1px;
@@ -112,19 +111,19 @@ form > i {
 @media (max-width:600px) {
 
   nav{
-    /* align-items: baseline; */
+    align-items: flex-end;
     padding: 0 2em;
     position: relative;
   }
 
   #collapse {
     position: absolute;
-    border: thin solid #757575;
-    box-shadow: 0 2px 5px #000;
+    border: thin solid #2c3632;
+    box-shadow: 0 2px 5px #030303;
     flex-direction: column;
     top: 3.5em;
-    background-color: #fafafa;
-    color: #212121;
+    background-color: #2c3632;
+    color: #f0f1f4;
     border-radius: 3px;
   }
 
@@ -143,35 +142,30 @@ form > i {
   }
 
   #collapse a:hover{
-    background-color: #757575;
-    color: #ffffff;
+    background-color: #d3d4d6;
   }
 
   #collapse-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     display: initial;
-    border: thin solid #fafafa;
-    background-color: #212121;
+    border: thin solid #2c3632;
+    background-color: #2c3632;
     padding: 0.75em .5em;
     border-radius: 3px;
-    box-shadow: 0 2px 5px #757575;
+    box-shadow: 0 1px 3px #899593;
+  }
+
+  #collapse-button:hover {
+    box-shadow: 0 1px 3px #030303;
   }
 
   #collapse-button > * {
-    border-top: 1px solid #fff;
+    border-top: 1px solid #f0f1f4;
     width: 10px;;
     margin-top: 0.25em;
   }
 
   #collapse-button > :first-child{
     margin: 0;
-  }
-
-  nav #collapse-btn:hover #collapse{
-    background-color: #fff000;
   }
 
 }
