@@ -1,1 +1,3 @@
-Github profiles Viewer
+# Github profiles Viewer
+
+## A progressive web app
