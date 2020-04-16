@@ -1,11 +1,9 @@
-body > :first-child{
-  padding-bottom: 0;
+body > :first-child {
   color: #030303;
 }
 
-body > :first-child h1{
-  padding: 0.25em;
-  padding-top: .25em;
+body > :first-child h1 {
+  padding: 0.5em 0 0.25em;
   font-size: 3.25em;
   text-align: center;
   font-weight: 400;
@@ -14,7 +12,7 @@ body > :first-child h1{
   text-shadow: 1px 1px 1px #899593;
 }
 
-body > :first-child h1 span{
+body > :first-child h1 span {
   position: absolute;
   bottom: 0;
   font-size: 0.5em;
@@ -25,92 +23,96 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: 0 auto 1em;
+  margin: 0 auto 1.25em;
 }
 
-#collapse{
+#collapse {
   display: flex;
   align-self: flex-end;
   color: #2c3632;
-
 }
 
 #collapse a {
   padding: 0 1em;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 1.083em;
   font-weight: 600;
   color: inherit;
   letter-spacing: 0.5px;
-  transition: color 200ms ease-out;
+  transition: color 200ms ease-out, font-size 300ms ease;
   position: relative;
   color: inherit;
 }
 
-#collapse a:hover{
+#collapse a:hover {
   color: #030303;
+  font-size: 1.15em;
 }
 
 form {
   border: none;
-  border-bottom: thin solid #2c3632;
+  border-bottom: thin solid #899593;
   position: relative;
   background-color: inherit;
+  transition: border 200ms ease;
 }
 
-form:hover  i{
-  color: rgb(25, 180, 102);
+form:focus-within {
+  border-bottom-color: #2c3632;
+  border-bottom-width: 0.5px;
 }
 
 input {
   background-color: inherit;
-  padding: 0 .5em .4em;
+  padding: 0 0.5em 0.4em;
   width: 100%;
   border: none;
   outline: none;
   text-transform: capitalize;
   letter-spacing: 0.375px;
   font-size: 1.125em;
+  font-weight: 500;
 }
 
-::placeholder{
-  color: #2c3632;
+::placeholder {
+  color: #899593;
 }
+
 form > i {
-  color: #2c3632;
+  color: #899593;
   font-size: 1em;
   position: absolute;
   top: 1px;
-  right: 12px;
+  right: 1em;
 }
 
+form:focus-within > i {
+  color: #2c3632;
+}
 
 #collapse-button {
   display: none;
 }
 
-@media (min-width:1280px) {
-  nav{
+@media (min-width: 1280px) {
+  nav {
     width: 80%;
   }
 }
-@media (min-width:1024px) {
-  nav{
+@media (min-width: 1024px) {
+  nav {
     width: 85%;
   }
 }
 
-
-@media (max-width:630px) {
-  nav { 
+@media (max-width: 630px) {
+  nav {
     width: 100%;
   }
 }
 
-
-@media (max-width:600px) {
-
-  nav{
+@media (max-width: 600px) {
+  nav {
     align-items: flex-end;
     padding: 0 2em;
     position: relative;
@@ -121,7 +123,7 @@ form > i {
     border: thin solid #2c3632;
     box-shadow: 0 2px 5px #030303;
     flex-direction: column;
-    top: 3.5em;
+    top: 3em;
     background-color: #2c3632;
     color: #f0f1f4;
     border-radius: 3px;
@@ -136,22 +138,25 @@ form > i {
     font-weight: 600;
     color: inherit;
     letter-spacing: 0.5px;
-    transition: color 200ms ease-out;
+    transition: all 150ms ease;
     position: relative;
     color: inherit;
   }
 
-  #collapse a:hover{
+  #collapse a:hover {
     background-color: #d3d4d6;
+    color: #2c3632;
+    font-size: 1.083em;
   }
 
   #collapse-button {
     display: initial;
     border: thin solid #2c3632;
     background-color: #2c3632;
-    padding: 0.75em .5em;
+    padding: 0.75em 0.5em;
     border-radius: 3px;
     box-shadow: 0 1px 3px #899593;
+    transition: all 100ms ease-out;
   }
 
   #collapse-button:hover {
@@ -160,12 +165,16 @@ form > i {
 
   #collapse-button > * {
     border-top: 1px solid #f0f1f4;
-    width: 10px;;
+    width: 10px;
     margin-top: 0.25em;
   }
 
-  #collapse-button > :first-child{
-    margin: 0;
+  #collapse-button:active {
+    background-color: #030303;
+    box-shadow: 0 2px 5px #030303;
   }
 
+  #collapse-button > :first-child {
+    margin: 0;
+  }
 }
